@@ -12,9 +12,11 @@ The download is an ad-hoc signed test build, not notarized by Apple; macOS may w
 
 The supported target is an Apple-silicon Mac running macOS 15 or later. Install Git, Node.js and npm, Rust and Cargo, CMake, and Apple's Command Line Tools and a recent macOS SDK. If needed, install Apple's tools with `xcode-select --install`.
 
-After cloning the repository, run these commands in its root:
+Clone the repository and build the app:
 
 ```bash
+git clone https://github.com/himnishpersonal/mochi.git
+cd mochi
 npm ci
 npm run tauri:build:system-audio
 open src-tauri/target/release/bundle/macos/
