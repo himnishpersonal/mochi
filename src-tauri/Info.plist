@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>MOCHI records audio only when you press Record and stores it locally for transcription.</string>
+  <key>NSAudioCaptureUsageDescription</key>
+  <string>MOCHI records Mac audio when you start a meeting or video so it can transcribe it locally.</string>
+  <key>NSScreenCaptureUsageDescription</key>
+  <string>MOCHI uses macOS Screen &amp; System Audio Recording only when you press Record, so calls and meetings can be transcribed locally.</string>
+</dict>
+</plist>

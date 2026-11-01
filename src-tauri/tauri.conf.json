@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MOCHI",
+  "version": "0.7.0",
+  "identifier": "app.mochi.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "MOCHI",
+        "width": 1180,
+        "height": 760,
+        "minWidth": 900,
+        "minHeight": 620,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true
+      },
+      {
+        "label": "shadow",
+        "title": "Shadow MOCHI",
+        "url": "index.html?shadow=1",
+        "width": 368,
+        "height": 72,
+        "minWidth": 368,
+        "minHeight": 72,
+        "maxWidth": 520,
+        "maxHeight": 388,
+        "visible": false,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "visibleOnAllWorkspaces": true,
+        "skipTaskbar": true,
+        "shadow": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: http://asset.localhost; media-src 'self' asset: http://asset.localhost; style-src 'self' 'unsafe-inline'; connect-src 'self' ipc: http://ipc.localhost",
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["$APPDATA/audio/**"]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons-mochi-b2-rounded/32x32.png",
+      "icons-mochi-b2-rounded/128x128.png",
+      "icons-mochi-b2-rounded/128x128@2x.png",
+      "icons-mochi-b2-rounded/icon.icns",
+      "icons-mochi-b2-rounded/icon.ico"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "15.0",
+      "signingIdentity": "-",
+      "hardenedRuntime": false
+    }
+  }
+}

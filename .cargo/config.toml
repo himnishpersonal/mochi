@@ -1,0 +1,7 @@
+[env]
+# whisper.cpp uses C++17 filesystem APIs that are only available from macOS
+# 10.15 onward. Keep Cargo, clang, and the nested CMake build aligned so a
+# clean release build does not inherit an older host default.
+MACOSX_DEPLOYMENT_TARGET = "10.15"
+CMAKE_OSX_DEPLOYMENT_TARGET = "10.15"
+
