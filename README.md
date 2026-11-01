@@ -1,3 +1,5 @@
+<img src="src/assets/mochi-b2.png" alt="MOCHI mascot" width="140" align="right" />
+
 # MOCHI
 
 **My Offline Conversation Hub & Intelligence** — a local-first desktop notetaker for meetings and lectures.
